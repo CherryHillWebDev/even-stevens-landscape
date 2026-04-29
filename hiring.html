@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="/css/main.css">
   <link href="https://fonts.googleapis.com/css2?family=Magra:wght@400;700&family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/x-icon" href="/img/favicon.webp">
   <style>
     /* ── HERO ── */
     .page-hero { background: var(--text-dg); padding: 4rem 0 4.5rem; position: relative; overflow: hidden; }
@@ -37,7 +38,7 @@
     .as-content p { font-size: 0.82rem; color: #777; line-height: 1.6; }
 
     /* Form card */
-    .contact-form-container { background: #fff; border-radius: var(--radius-md); box-shadow: 0 8px 40px rgba(0,0,0,0.1); overflow: hidden; position: sticky; top: 110px; }
+    .contact-form-container { background: #fff; border-radius: var(--radius-md); box-shadow: 0 8px 40px rgba(0,0,0,0.1); overflow: hidden; position: sticky; top: 110px; padding: 0;}
     .form-header { background: var(--text-dg); padding: 1.75rem 2rem; }
     .form-header .fh-label { font-family: var(--theme-font); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--theme); margin-bottom: 0.4rem; }
     .form-header h3 { font-family: var(--theme-font); font-size: 1.25rem; font-weight: 700; color: #fff; margin-bottom: 0.3rem; }
@@ -54,11 +55,20 @@
     .submit-btn:hover::before { left: 100%; }
     .submit-btn:hover { background: #e69200; }
     .form-note { font-size: 0.72rem; color: #aaa; text-align: center; margin-top: 0.75rem; }
+    .application-q-row input {
+        height: 44px; width: 100%; outline: none; border: 1.5px solid #ddd; border-radius: var(--radius-sm); padding: 0 0.85rem; font-family: var(--body-font); font-size: 0.875rem; color: var(--text-dg); background: #fafafa; transition: border-color 0.2s;
+    }
+    .application-q-row input:focus {
+        border-color: var(--cta); background: #fff; 
+    }
+    .application-q-row label {
+        display: block; text-align: center; margin: auto;
+    }
 
     @media (max-width: 960px) {
       .why-work .content-container { grid-template-columns: 1fr; gap: 2.5rem; }
       .apply-layout { grid-template-columns: 1fr; }
-      .contact-form-container { position: static; }
+      .contact-form-container { position: static; padding: 0rem;}
     }
     @media (max-width: 768px) {
       .positions-grid { grid-template-columns: 1fr; }
@@ -73,17 +83,17 @@
         <header>
             <div class="header-top flex between">
                 <div class="flex gap-1rm">
-                    <p class="white-font">Serving Camden County, Burlington County, and Surrounding Areas</p>    
+                    <p class="white-font">Serving Camden County, Gloucester County, and Surrounding Areas</p>    
                     <a href="tel:856-430-2777" style="text-decoration: none;"><p class="white-font header-top-phn-holder"><span class='img-wrapper header-top-phn'><img class="header-top-phn" src="/img/icons/phone.svg"></span>(856) 430-2777 </p></a>
                 </div>
                 
                 <div class="socials-holder flex center-justify gap-1rm">
                     <p class="white-font">Follow us on:</p>
                     <div class="img-wrapper header-soc-icon">
-                        <a><img src="/img/icons/facebook.svg"></a>
+                        <a target="_blank" href="https://www.facebook.com/profile.php?id=100090442382123"><img src="/img/icons/facebook.svg"></a>
                     </div>
                     <div class="img-wrapper header-soc-icon">
-                        <a><img src="/img/icons/instagram.svg"></a>
+                        <a target="_blank" href="https://www.instagram.com/evenstevenslandscapemgmt/"><img src="/img/icons/instagram.svg"></a>
                     </div>
                 </div>
             </div>
@@ -105,6 +115,7 @@
                                 <li><a href="/services/south-jersey-mulching.html">Mulching & Bed Care</a></li>
                                 <li><a href="/services/south-jersey-hardscaping.html">Hardscaping</a></li>
                                 <li><a href="/services/south-jersey-seasonal.html">Seasonal Services</a></li>
+                                <li><a href="/services/south-jersey-commercial-snow-removal.html">Commercial Snow Removal</a></li>
                                 <li><a href="/services/south-jersey-other-landscaping-services.html">Other Services</a></li>
                             </ul>
                         </div>
@@ -142,6 +153,9 @@
                                                 </li>
                                                 <li>
                                                     <a href="/services/south-jersey-seasonal.html"  class="dropdown-link">Seasonal Services</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/services/south-jersey-commercial-snow-removal.html"  class="dropdown-link">Commercial Snow Removal</a>
                                                 </li>
                                                 <li>
                                                     <a href="/services/south-jersey-other-landscaping-services.html"  class="dropdown-link">Other Services</a>
@@ -188,8 +202,8 @@
           <h2>Send Us a Message and We'll Be in Touch</h2>
           <div class="leaf-divider"></div>
           <p>Just send us a message with your name, a little about your experience, and what kind of work you're looking for. We'll reach back out if we feel like it's a good fit to have a real conversation.</p>
-          <p>We move fast when we find the right person — so don't wait if you're interested in getting started before the season kicks off.</p>
-
+          <p>Even Steven's is one of the fastest growing landscape management companies in the area. Joining the team now is a great opportunity to get in early, and take advantage of the unlimited growth potential that this company can offer you!</p>
+          <p>Just fill out the form on this page and we'll be in touch if we feel that your skills & experience align with our needs. We look forward to hearing from you! </p>
         </div>
 
         <!-- FORM -->
@@ -203,19 +217,44 @@
             <div class="email-form" id="email-form">
               <form action="https://formsubmit.co/matt@cherryhillwebdev.com" method="POST">
                 <div class="form-group">
+                    <p>Contact Information:</p>
                   <div class="form-row">
                     <input type="hidden" name="_subject" id="_subject" value="New Job Application — Even Steven's Website" />
                     <input type="text" name="name" id="name" placeholder="Full Name*" required>
                     <input type="email" name="email" id="email" placeholder="Email Address*" required>
-                    <input type="text" name="phone-number" id="phone-number" placeholder="Best phone number?">
-                    <input type="text" name="location" id="location" placeholder="Where are you located?">
+                    <input type="text" name="phone-number" id="phone-number" placeholder="Best phone number?*" required>
+                    <input type="text" name="location" id="location" placeholder="Where are you located?*" required>
                   </div>
+                  <div class="application-q-row">
+                    <p>What language(s) do you speak?</p>
+                    <input type="text" name="languages" id="languages" placeholder="English, Spanish, Both*" required>
+                    <div>
+                        <fieldset style="border: none; outline: none; margin: 0.5rem 0;">
+                            <legend><p>Do you have a valid NJ Driver's License and Transportation to the Shop?</p></legend>
+                        </fieldset>
+                        <div class="flex center-justify center-align gap-1rm">
+                            <div style="gap: 0.33rem" class="flex center-justify">
+                                <input type="radio" id="transport-yes" name="transportation" value="Yes" checked />
+                                <label for="transport-yes">Yes</label>
+                            </div>
+                            <div style="gap: 0.33rem" class="flex center-justify">
+                                <input type="radio" id="transport-no" name="transportation" value="No" />
+                                <label for="transport-no">No</label>
+                            </div>    
+                        </div>
+                    </div>
+                    <p>What position are you applying for?</p>
+                    <input type="text" name="languages" id="languages" placeholder="Lawn maintenance laborer, management/foreman, etc.*" required>
+                    <p class="mt-md">Were you referred by anybody?</p>
+                    <input type="text" name="languages" id="languages" placeholder="If so, write their name here">
+                  </div>
+                  <p class="mt-md">Tell us about your experience, including experience that can be used in other areas of the business (ex. engine repair, fertilizer licensing, etc.)</p>
                   <div class="email-body">
-                    <textarea placeholder="Tell us about yourself — your experience, what kind of work you're looking for, and when you're available to start.*" name="message" rows="10" required></textarea>
+                    <textarea placeholder="Write your response here*" name="message" rows="10" required></textarea>
                   </div>
                 </div>
                 <button class="submit-btn header-contact auto-margin med-scale mt-md" type="submit"><span class="h-con-text">Submit Application</span></button>
-                <p class="form-note">We look forward to hearing from you. Every message gets a response.</p>
+                <p class="form-note">We look forward to hearing from you.</p>
               </form>
             </div>
           </div>
@@ -236,9 +275,9 @@
                     <div class="footer-logo-name">Even Steven's Landscape Management</div>
                     <p>Family-owned and operated, proudly serving Camden County, NJ since day one. We take the same care with every yard — yours included.</p>
                     <div class="footer-social">
-                        <a href="#" class="soc-btn"  style="text-decoration: none;" aria-label="Facebook">f</a>
-                        <a href="#" class="soc-btn" style="text-decoration: none;" aria-label="Instagram">in</a>
-                        <a href="#" class="soc-btn" style="text-decoration: none;" aria-label="Google">G</a>
+                        <a target="_blank" href="https://www.facebook.com/profile.php?id=100090442382123" class="soc-btn"  style="text-decoration: none;" aria-label="Facebook">f</a>
+                        <a target="_blank" href="https://www.instagram.com/evenstevenslandscapemgmt/" class="soc-btn" style="text-decoration: none;" aria-label="Instagram">in</a>
+                        <a target="_blank" href="https://share.google/vdDoGLUcUjtM50Yem" class="soc-btn" style="text-decoration: none;" aria-label="Google">G</a>
                     </div>
                 </div>
 
@@ -246,12 +285,13 @@
                 <div class="footer-col">
                 <h4>Services</h4>
                 <ul>
-                    <li><a href="#">Lawn Care &amp; Mowing</a></li>
-                    <li><a href="#">Landscaping Design</a></li>
-                    <li><a href="#">Mulching &amp; Bed Care</a></li>
-                    <li><a href="#">Hardscaping</a></li>
-                    <li><a href="#">Seasonal Services</a></li>
-                    <li><a href="#">Other Services</a></li>
+                    <li><a href="/services/south-jersey-lawncare-mowing.html">Lawn Care &amp; Mowing</a></li>
+                    <li><a href="/services/south-jersey-landscaping.html">Landscaping Design</a></li>
+                    <li><a href="/services/south-jersey-mulching.html">Mulching &amp; Bed Care</a></li>
+                    <li><a href="/services/south-jersey-hardscaping.html">Hardscaping</a></li>
+                    <li><a href="/services/south-jersey-seasonal.html">Seasonal Services</a></li>
+                    <li><a href="/services/south-jersey-commercial-snow-removal.html">Commercial Snow Removal</a></li>
+                    <li><a href="/services/south-jersey-other-landscaping-services.html">Other Services</a></li>
                 </ul>
                 </div>
 
@@ -278,15 +318,15 @@
                 </div>
                 <div class="footer-contact-item">
                     <span class="img-wrapper" style="margin-top: 3px;"><img src="/img/icons/email.svg" style="max-width: 15px;"></span>
-                    <div class="fc-text"><a href="mailto:info@evenstevenslandscape.com">info@evenstevenslandscape.com</a></div>
+                    <div class="fc-text"><a href="mailto:info@steveslawncarenj.com">info@steveslawncarenj.com</a></div>
                 </div>
                 <div class="footer-contact-item">
                     <span class="img-wrapper" style="margin-top: 3px;"><img src="/img/icons/map.svg" style="max-width: 15px;"></span>
-                    <div class="fc-text">Serving Pennsauken to Bellmawr<br/>Camden County, NJ</div>
+                    <div class="fc-text">575 Champion Ave<br/>Collingswood, NJ</div>
                 </div>
                 <div class="footer-contact-item">
                     <span class="img-wrapper" style="margin-top: 3px;"><img src="/img/icons/clock.svg" style="max-width: 15px;"></span>
-                    <div class="fc-text">Mon–Sun: 7am – 7pm<br/>Free estimates available</div>
+                    <div class="fc-text">Mon–Fri: 7am – 5pm<br/>Free estimates available</div>
                 </div>
                 </div>
 

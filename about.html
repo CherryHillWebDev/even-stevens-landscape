@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="/css/main.css">
   <link href="https://fonts.googleapis.com/css2?family=Magra:wght@400;700&family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/x-icon" href="/img/favicon.webp">
   <style>
     /* ── HERO ── */
     .page-hero { background: var(--text-dg); padding: 4rem 0 4.5rem; position: relative; overflow: hidden; }
@@ -150,8 +151,9 @@
     }
     .lb-close:hover { background: rgba(255,255,255,0.25); }
     .lb-footer {
-      position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+      position: absolute; bottom: 10%; left: 50%; transform: translateX(-50%);
       display: flex; align-items: center; gap: 1rem; padding-bottom: 0.5rem;
+      background: rgba(24, 24, 24, 0.5); padding: 1rem; border-radius: 50px; border: 2px solid rgba(255, 255, 255, 0.2);
     }
     .lb-caption { font-family: var(--theme-font); font-size: clamp(0.5rem, 0.4489rem + 0.5634vw, 1.125rem); font-weight: 700; color: rgba(255,255,255,0.8); }
     .lb-counter { font-size: 0.75rem; color: rgba(255,255,255,0.4); }
@@ -186,6 +188,7 @@
       .values-grid { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr; }
       .area-towns { grid-template-columns: 1fr; }
+      .lb-footer { padding: 0.5rem; }
     }
   </style>
 </head>
@@ -195,17 +198,17 @@
         <header>
             <div class="header-top flex between">
                 <div class="flex gap-1rm">
-                    <p class="white-font">Serving Camden County, Burlington County, and Surrounding Areas</p>    
+                    <p class="white-font">Serving Camden County, Gloucester County, and Surrounding Areas</p>    
                     <a href="tel:856-430-2777" style="text-decoration: none;"><p class="white-font header-top-phn-holder"><span class='img-wrapper header-top-phn'><img class="header-top-phn" src="/img/icons/phone.svg"></span>(856) 430-2777 </p></a>
                 </div>
                 
                 <div class="socials-holder flex center-justify gap-1rm">
                     <p class="white-font">Follow us on:</p>
                     <div class="img-wrapper header-soc-icon">
-                        <a><img src="/img/icons/facebook.svg"></a>
+                        <a target="_blank" href="https://www.facebook.com/profile.php?id=100090442382123"><img src="/img/icons/facebook.svg"></a>
                     </div>
                     <div class="img-wrapper header-soc-icon">
-                        <a><img src="/img/icons/instagram.svg"></a>
+                        <a target="_blank" href="https://www.instagram.com/evenstevenslandscapemgmt/"><img src="/img/icons/instagram.svg"></a>
                     </div>
                 </div>
             </div>
@@ -227,6 +230,7 @@
                                 <li><a href="/services/south-jersey-mulching.html">Mulching & Bed Care</a></li>
                                 <li><a href="/services/south-jersey-hardscaping.html">Hardscaping</a></li>
                                 <li><a href="/services/south-jersey-seasonal.html">Seasonal Services</a></li>
+                                <li><a href="/services/south-jersey-commercial-snow-removal.html">Commercial Snow Removal</a></li>
                                 <li><a href="/services/south-jersey-other-landscaping-services.html">Other Services</a></li>
                             </ul>
                         </div>
@@ -264,6 +268,9 @@
                                                 </li>
                                                 <li>
                                                     <a href="/services/south-jersey-seasonal.html"  class="dropdown-link">Seasonal Services</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/services/south-jersey-commercial-snow-removal.html"  class="dropdown-link">Commercial Snow Removal</a>
                                                 </li>
                                                 <li>
                                                     <a href="/services/south-jersey-other-landscaping-services.html"  class="dropdown-link">Other Services</a>
@@ -315,7 +322,7 @@
                 <h2>Started in Oaklyn. Built One Yard at a Time.</h2>
                 <div class="leaf-divider"></div>
                 <p>Even Steven's was founded in 2023 by Steve, a South Jersey native who traded the corporate world for something he actually loves doing. Steve holds a BBA and MBA from Rutgers, but what really got him into landscaping was simpler than that: he genuinely enjoys working outside, and he's good at it.</p>
-                <p>Steve started the business in Oaklyn and has been growing it steadily ever since, mostly through word of mouth from neighbors who liked the work and told someone about it. That's still how most of our new clients find us, and honestly that's the best kind of referral there is.</p>
+                <p>Steve started the business in Oaklyn and has been growing it rapidly ever since he took his business full time in 2025, mostly through word of mouth from neighbors who liked the work and told someone about it. That's still how most of our new clients find us, and honestly that's the best kind of referral there is.</p>
                 <p>When you call Even Steven's, you're talking to Steve. When we show up to your property, Steve is there. There's no middleman, no crew you've never met, no wondering who's going to show up. That level of consistency is something the bigger companies just can't offer, and it's something Steve takes real pride in.</p>
                 <p>This year Steve is expanding into hardscaping and design, so Even Steven's can handle full outdoor transformations from the ground up. Same values, bigger toolkit.</p>
             </div>
@@ -406,7 +413,7 @@
           <div class="area-town"><span class="at-dot"></span> Haddon Heights</div>
           <div class="area-town"><span class="at-dot"></span> Oaklyn</div>
           <div class="area-town"><span class="at-dot"></span> Mount Ephraim</div>
-          <div class="area-town"><span class="at-dot"></span> Lawnside</div>
+          <div class="area-town"><span class="at-dot"></span> Voorhees</div>
           <div class="area-town"><span class="at-dot"></span> Bellmawr</div>
         </div>
       </div>
@@ -455,12 +462,12 @@
           </div>
         </div>
 
-        <div class="gallery-item" data-index="3" data-caption="Lawn edging and aeration — Cherry Hill, NJ" role="button" tabindex="0" aria-label="Open gallery image 4">
+        <div class="gallery-item" data-index="3" data-caption="Rock Installation — Cherry Hill, NJ" role="button" tabindex="0" aria-label="Open gallery image 4">
           <div class="gallery-ph">
             <img src="/img/gallery/cherry-hill-landscaping-2.webp">
           </div>
           <div class="gallery-overlay">
-            <span class="gallery-caption">Lawn edging and aeration — Cherry Hill, NJ</span>
+            <span class="gallery-caption">Rock Installation — Cherry Hill, NJ</span>
             <span class="gallery-zoom">🔍</span>
           </div>
         </div>
@@ -554,9 +561,9 @@
                 <div class="footer-logo-name">Even Steven's Landscape Management</div>
                 <p>Family-owned and operated, proudly serving Camden County, NJ since day one. We take the same care with every yard — yours included.</p>
                 <div class="footer-social">
-                    <a href="#" class="soc-btn"  style="text-decoration: none;" aria-label="Facebook">f</a>
-                    <a href="#" class="soc-btn" style="text-decoration: none;" aria-label="Instagram">in</a>
-                    <a href="#" class="soc-btn" style="text-decoration: none;" aria-label="Google">G</a>
+                    <a target="_blank" href="https://www.facebook.com/profile.php?id=100090442382123" class="soc-btn"  style="text-decoration: none;" aria-label="Facebook">f</a>
+                    <a target="_blank" href="https://www.instagram.com/evenstevenslandscapemgmt/" class="soc-btn" style="text-decoration: none;" aria-label="Instagram">in</a>
+                    <a target="_blank" href="https://share.google/vdDoGLUcUjtM50Yem" class="soc-btn" style="text-decoration: none;" aria-label="Google">G</a>
                 </div>
             </div>
 
@@ -564,12 +571,13 @@
             <div class="footer-col">
             <h4>Services</h4>
             <ul>
-                <li><a href="#">Lawn Care &amp; Mowing</a></li>
-                <li><a href="#">Landscaping Design</a></li>
-                <li><a href="#">Mulching &amp; Bed Care</a></li>
-                <li><a href="#">Hardscaping</a></li>
-                <li><a href="#">Seasonal Services</a></li>
-                <li><a href="#">Other Services</a></li>
+                <li><a href="/services/south-jersey-lawncare-mowing.html">Lawn Care &amp; Mowing</a></li>
+                <li><a href="/services/south-jersey-landscaping.html">Landscaping Design</a></li>
+                <li><a href="/services/south-jersey-mulching.html">Mulching &amp; Bed Care</a></li>
+                <li><a href="/services/south-jersey-hardscaping.html">Hardscaping</a></li>
+                <li><a href="/services/south-jersey-seasonal.html">Seasonal Services</a></li>
+                <li><a href="/services/south-jersey-commercial-snow-removal.html">Commercial Snow Removal</a></li>
+                <li><a href="/services/south-jersey-other-landscaping-services.html">Other Services</a></li>
             </ul>
             </div>
 
@@ -596,15 +604,15 @@
             </div>
             <div class="footer-contact-item">
                 <span class="img-wrapper" style="margin-top: 3px;"><img src="/img/icons/email.svg" style="max-width: 15px;"></span>
-                <div class="fc-text"><a href="mailto:info@evenstevenslandscape.com">info@evenstevenslandscape.com</a></div>
+                <div class="fc-text"><a href="mailto:info@steveslawncarenj.com">info@steveslawncarenj.com</a></div>
             </div>
             <div class="footer-contact-item">
                 <span class="img-wrapper" style="margin-top: 3px;"><img src="/img/icons/map.svg" style="max-width: 15px;"></span>
-                <div class="fc-text">Serving Pennsauken to Bellmawr<br/>Camden County, NJ</div>
+                <div class="fc-text">575 Champion Ave<br/>Collingswood, NJ</div>
             </div>
             <div class="footer-contact-item">
                 <span class="img-wrapper" style="margin-top: 3px;"><img src="/img/icons/clock.svg" style="max-width: 15px;"></span>
-                <div class="fc-text">Mon–Sun: 7am – 7pm<br/>Free estimates available</div>
+                <div class="fc-text">Mon–Fri: 7am – 5pm<br/>Free estimates available</div>
             </div>
             </div>
 
@@ -635,7 +643,7 @@
       { src: '/img/gallery/haddon-township-landscaping-1.webp', caption: 'Landscaping — Haddon Township, NJ' },
       { src: '/img/gallery/cherry-hill-landscaping-1.webp',     caption: 'Hardscaping — Cherry Hill, NJ' },
       { src: '/img/gallery/haddonfield-landscaping-1.webp',     caption: 'Pathway Installation — Haddonfield, NJ' },
-      { src: '/img/gallery/cherry-hill-landscaping-2.webp',     caption: 'Lawn edging and aeration — Cherry Hill, NJ' },
+      { src: '/img/gallery/cherry-hill-landscaping-2.webp',     caption: 'Rock Installation — Cherry Hill, NJ' },
       { src: '/img/gallery/cherry-hill-landscaping-3.webp',     caption: 'Grass Mowing — Cherry Hill, NJ' },
       { src: '/img/gallery/collingswood-landscaping-1.webp',    caption: 'Grass Mowing &amp; Mulching — Collingswood, NJ' },
       { src: '/img/gallery/haddon-township-landscaping-2.webp', caption: 'Landscaping — Haddon Township, NJ' },
